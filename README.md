@@ -1,2 +1,4 @@
-# icosahedron-sphere
-For UE4 - Takes an icosahedron, subdivides it N times. Normalizes the vertices to create a unit-sphere. This implementation takes an underlying class which provides the aforementioned services and uses that to create a Procedurally Generated Mesh on a PawnBase.
+# Icosphere for UE4
+Takes an icosahedron, subdivides it N times to create a sphere-like geometry. While sub-dividing, the vertices are normalized to ensure a unit sphere is formed. An interface is provided to access the TArrays holding the indexed vertices for each triangle on the icosphere, and the vertices themselves. UV-mapping is dealt with, and normals are merely the vertices themselves (normalized if the sphere is scaled).
+
+All instances of the PawnBase will create their own ProceduralMeshComponent, copy the vertices, triangles, and anything else it needs to from a shared instance of the icosphere. Each PawnBase will then make any modifications to the sphere using their local copy.

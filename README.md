@@ -4,4 +4,5 @@ Takes an icosahedron, subdivides it N times to create a sphere-like geometry. Wh
 All instances of the PawnBase will create their own ProceduralMeshComponent, copy the vertices, triangles, and anything else it needs to from a shared instance of the icosphere. Each PawnBase will then make any modifications to the sphere using their local copy.
 
 Code adapted from what is available here: https://schneide.blog/2016/07/15/generating-an-icosphere-in-c/
+
 dead-link safety: {author="Marius Elvert", date=2016, company="softwareschneiderei"}
